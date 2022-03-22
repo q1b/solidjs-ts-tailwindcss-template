@@ -1,0 +1,1 @@
+# solidjs-ts-tailwindcss-template
