@@ -1,18 +1,21 @@
 import type { Component } from 'solid-js';
 
-import logo from './logo.svg';
-import styles from './App.module.css';
-
 const App: Component = () => {
+  const c = (n:number):string => '&nbsp;'*n;
   return (
-    <div class={styles.App}>
-      <header class={styles.header}>
-        <img src={logo} class={styles.logo} alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+    <div class="flex flex-col items-center p-20">
+      <header class="text-indigo-600">
+        <p class="">
+          Edit <span class="text-indigo-800 font-mono underline decoration-wavy">
+                  src/App.tsx
+                </span> 
+          &nbsp;and 
+          <span class="text-violet-600">
+            save to reload.
+          </span>
         </p>
         <a
-          class={styles.link}
+          class="text-blue-600 underline pt-6"
           href="https://github.com/solidjs/solid"
           target="_blank"
           rel="noopener noreferrer"
@@ -20,6 +23,16 @@ const App: Component = () => {
           Learn Solid
         </a>
       </header>
+          <pre class="whitespace-pre-wrap">{`
+╭────────────────────────╮
+│  Solidjs + typescript  │
+│      & tailwindcss     │
+│    Minimal & simple    │
+│     Clone & start      │
+│   Update package name  │
+╰────────────────────────╯
+           `}
+          </pre>
     </div>
   );
 };
